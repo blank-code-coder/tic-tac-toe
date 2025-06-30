@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Tic-Tac-Toe</h1>
+
+      <div class="player-setup">
+        <div class="player-inputs">
+          <div class="player-input">
+            <label for="player1">Player 1 (X):</label>
+            <input type="text" id="player1" value="Player 1" maxlength="15" />
+          </div>
+          <div class="player-input">
+            <label for="player2">Player 2 (O):</label>
+            <input type="text" id="player2" value="Player 2" maxlength="15" />
+          </div>
+        </div>
+        <button onclick="GameController.startGame()">Start New Game</button>
+      </div>
+
+      <div class="score-board">
+        <div class="score">
+          <div class="score-label" id="player1-label">Player 1</div>
+          <div class="score-value" id="player1-score">0</div>
+        </div>
+        <div class="score">
+          <div class="score-label">Ties</div>
+          <div class="score-value" id="ties-score">0</div>
+        </div>
+        <div class="score">
+          <div class="score-label" id="player2-label">Player 2</div>
+          <div class="score-value" id="player2-score">0</div>
+        </div>
+      </div>
+
+      <div class="current-player" id="current-player">
+        Click "Start New Game" to begin!
+      </div>
+
+      <div class="game-board" id="game-board">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+      </div>
+
+      <div class="game-result hidden" id="game-result"></div>
+
+      <button
+        onclick="GameController.resetGame()"
+        style="background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%)"
+      >
+        Reset Game
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
